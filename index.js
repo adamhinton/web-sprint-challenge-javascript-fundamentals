@@ -107,9 +107,14 @@ return item.population < 5;
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
-  function USApop(/*Your Code Here*/){
-    /*Your Code Here*/
+  function USApop(data){
+    const singleValue = data.reduce(function(accumulator, item){
+      return accumulator + item.population;
+    }, 0);
+    return singleValue;
   }
+
+  // console.log(USApop(zooAnimals));
   
   
   // 🦁🦁🦁 Callbacks 🦁🦁🦁  
@@ -120,9 +125,12 @@ return item.population < 5;
     * The consume function should return the invocation of cb, passing a and b into cb as arguments
   */
 
-  function consume(/*Your Code Here */){
-    /*Your Code Here */
+  function consume(a, b, cb){
+const newFunction = cb(a, b);
+return cb(a,b)
   }
+
+
  
   
   /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
